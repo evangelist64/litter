@@ -12,19 +12,7 @@ import struct
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
-'''
-X1 = range(0, 50)
-Y1 = [num**2 for num in X1]
-X2 = [0, 1]
-Y2 = range(50, 100)
-Fig = plt.figure(figsize=(8,4))
-Ax = Fig.add_subplot(211)
-Ax.plot(X1, Y1)
-Ax2 = Fig.add_subplot(212)
-Ax2.plot(X1,Y2)
-Fig.savefig("test.jpg")
-plt.show()
-'''
+
 df_basic = None
 failed_cnts = None
 last_cnt = 0

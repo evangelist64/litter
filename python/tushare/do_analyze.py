@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 import tushare as ts
-import MySQLdb
 import struct
 import datetime
 
@@ -56,6 +55,7 @@ def load_all_data():
 
 def show_one_stock_pic(key_one):
     global df_all
+    print df_all
     stock_one = df_all[key_one]
     stock_one = stock_one.sort(columns='date')
     stock_one['change'] = stock_one.close - stock_one.open
@@ -108,6 +108,6 @@ def do_calc():
 if __name__ == '__main__':
     init()
     load_all_data()
-    #show_one_stock_pic('000014')
-    show_all_stock_pic()
+    show_one_stock_pic('002688')
+    #show_all_stock_pic()
     #do_calc()
