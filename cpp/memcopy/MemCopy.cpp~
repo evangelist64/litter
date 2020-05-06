@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+struct TestClass
+{
+	TestClass(int){}
+	TestClass(const TestClass& a){cout << "fff" << endl;}
+	~TestClass(){}
+};
+
+int main()
+{
+	//编译器没有实现Copy Elision,则会输出fff，因为从临时对象10拷贝构造a
+	TestClass a = 10;
+	return 0;
+}
+

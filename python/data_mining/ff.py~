@@ -1,0 +1,5 @@
+with open('hu_today.txt','r') as f:
+	f_str = f.read()
+data_list = re.findall(r'\"(.*)\"',f_str)
+
+

@@ -1,0 +1,7 @@
+Exception: STATUS_STACK_OVERFLOW at eip=0040148F
+eax=00001024 ebx=00000008 ecx=FFEA2BC4 edx=00000102 esi=80010350 edi=FFFFFFFE
+ebp=FFEBBBC8 esp=FFEBBBB8 program=E:\gitosc\Sundry\cpp\thread_11\main.exe, pid 11432, thread unknown (0x2DF0)
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+End of stack trace

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void callback()
+{
+	printf("%s","fff");
+}
+
+void func(void (*f)())
+{
+	f;
+}
+
+int main()
+{
+	return 0;
+}

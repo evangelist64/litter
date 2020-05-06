@@ -1,0 +1,53 @@
+enum em_user_sitdowntblreq_result
+	{
+		ret_sitdowntbl_initerror=0,
+		ret_sitdowntbl_ok=1,
+		ret_gs_user_intable,				//已经在桌子上了
+		ret_gs_adduser_fail,				//gs内存分配失败
+		ret_gs_user_assinggt_fail,			//gs上绑定这个用户到gt失败
+		ret_gs_user_assingdbs_fail,			//gs上绑定这个用户到dbs失败
+		ret_gs_user_assingfs_fail,			//gs上绑定这个用户到fs失败
+		// add by yanglichen 2010-07-28
+		ret_gs_fetchfail,					//请求坐下，但gs上没有发现这个桌子
+		ret_gs_tblpw_error,					//密码错误
+		ret_gs_user_in_table,				//gs发现这个用户已经在别的桌子上
+		ret_gs_table_errstate,				//gs上桌子的状态不正确
+		ret_gs_seat_noempty,				//gs上已经没有座位可以使用,可能座位已经关闭
+		ret_gs_thistbl_deleteing,			//桌子已经被解散了
+		ret_gs_othererr,					//gs上不确定的错误
+		// end
+		ret_cs_usercheck_fail,				//检查是否有资格玩游戏
+		ret_cs_finduser_intable,			//cs发现他已经在桌子上坐了
+		ret_cs_table_notexist,				//cs上发现桌子不存在
+		ret_cs_table_fill,					//cs上桌子没有位置可以使用
+		ret_cs_table_state_notallow,		//cs上的桌子状态不允许坐下，可能游戏已经开始
+		ret_cs_tablegs_notexist,			//cs上这个桌子不存在，可能已经解散
+		ret_cs_table_gaming,				//游戏已经开始了
+		ret_cs_req_param_error,				//
+		ret_cs_table_stateerror,			//桌子的状态不允许你坐下
+		ret_gs_youlevel_low,				//你的等级太低
+		ret_gs_youlevel_hight,				//你的等级太高
+		ret_cs_user_param_error,			//用户身上参数错误,不该发生
+		ret_cs_user_leak_tongqian,			//用户缺少铜钱
+		ret_cs_table_filltwo,				//cs上桌子没有位置可以使用
+		ret_cs_table_limit_visit,			//禁止游客
+		ret_cs_limit_enterpage,				//禁止玩家进入该分页坐下
+		ret_cs_match_cant_active_sitdown,	//比赛桌子玩家不能主动坐下
+		ret_cs_sendsitdowmsg_togs_fail,
+		ret_cs_userstate_errortheop,		//这个状态不能进行这个操作
+		ret_cs_changetbl_copymsg_fail,		//缓存消息失败
+		ret_cs_ip_limit_intbl,				//同一个ip不能在同一个桌子上
+		ret_cs_table_fill_timelimit,		//cs上桌子没有位置可以使用
+		ret_cs_escape_forbit,				// 逃跑被禁
+		ret_cs_kill_monster_no_value,		//杀boss模式没有体力值
+		ret_cs_runrate_high,				//逃跑率过高		
+		ret_gs_master_ban_kick_looker,		//被禁的旁观人不能进入桌子
+
+		//内部使用
+		//	ret_sitdowntbl_ok=1,
+		ret_sitdowntbl_paramcheck_ok = 200,
+		ret_sitdowntbl_ismaysit_ok,
+		ret_sitdowntbl_csuserbindgs_ok,
+
+		ret_gs_user_in_table_blacklist = 300, //爆房黑名单
+	};

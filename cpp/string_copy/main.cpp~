@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class TestClass : public string
+{
+public:
+	TestClass(){}
+	TestClass(const string& str){cout << "fff" << endl;}
+	~TestClass(){}
+};
+
+int main()
+{
+	const char* s = "ggggg";
+//TestClass a = s;
+
+//	cout << &a << endl;
+	cout << s << endl;
+	return 0;
+}
+

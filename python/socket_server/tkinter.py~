@@ -1,0 +1,61 @@
+from Tkinter import *
+import struct
+import socket
+import threading
+import ctypes
+import tkMessageBox
+from copy import deepcopy
+
+class Application(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self,master)
+	self.master.title('test')
+	self.master.geometry(600x600)
+	self.pack()
+
+	self.cur_proc = []
+	self.cur_proc_str = StringVar()
+	self.cur_proc_struct = '='
+	self.cur_struct_str = StringVar()
+
+	self.all_proc_struct = ('=iiiHH48s48s48sHH?')
+	self.all_proc = ([20201,1,0,1,1,1,'fff','','',0,0,True)
+
+	self.all_proc_str = StringVar()
+	self.createWidgets()
+	self.connectToServer()
+
+    def createWidgets(self):
+	frm_L = Frame(self)
+	frm_L.pack(side = LEFT)
+	
+	self.entry_int = Entry(frm_L)
+	self.entry_int.pack()
+	self.button_str = Button(frm_L,text="wrinteInt",command=self.writeInt)
+	self.button_str.pack()
+
+	self.entry_int = Entry(frm_L)
+	self.entry_int.pack()
+	self.button_str = Button(frm_L,text="wrinteStr",command=self.writeStr)
+	self.button_str.pack()
+
+	self.cur_proc_label = Label(frm_L,textvariable=self.cur_proc_str)
+	self.cur_proc_label.pack(pady=10)
+
+	frm_R = Frame(self)
+	frm_R.pack(side = RIGHT,padx=80)
+
+	self.button_clear = Button(frm_R,text="clearProc",command=self.clearProc)
+	self.button_clear.pack(pady=10)
+
+	self.button_send = Button(frm_R,text="sendProc",command=self.clearProc)
+	self.button_send.pack(pady=10)
+
+    def hello(self):
+        name = self.nameInput.get() or 'world'
+        tkMessageBox.showinfo('Message', 'Hello, %s' % name)
+
+app = Application()
+app.master.title('Hello World')
+app.master.geometry('400x400')
+app.mainloop()

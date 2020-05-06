@@ -1,0 +1,178 @@
+cscope 15 /cygdrive/e/gitosc/cpp/memcopy               0000000726
+	@CopyStream.cpp
+
+1 
+	~<io¡»am
+>
+
+3 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+5 
+	sTe¡CÏss
+
+
+7 
+	ma
+;
+
+8 
+	mb
+;
+
+9 
+	mc
+;
+
+11 
+Te¡CÏss
+(){}
+
+12 ~
+Te¡CÏss
+(){}
+
+15 
+	$maš
+()
+
+17 
+a
+[100];
+
+18 
+Te¡CÏss
+ 
+tc1
+;
+
+19 
+Te¡CÏss
+ 
+tc2
+;
+
+20 
+tc1
+.
+a
+ = 1;
+
+21 
+tc1
+.
+b
+ = 2;
+
+22 
+tc1
+.
+c
+ = 3;
+
+24 
+	`memýy
+(
+a
+, (*)&
+tc1
+, (
+Te¡CÏss
+));
+
+25 
+cout
+ << 
+a
+ <<
+’dl
+;
+
+26 
+	`memýy
+(&
+tc2
+, 
+a
+, (
+Te¡CÏss
+));
+
+27 
+cout
+ << 
+tc2
+.
+b
+ <<
+’dl
+;
+
+28 
+	}
+}
+
+	@MemCopy.cpp
+
+1 
+	~<io¡»am
+>
+
+3 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+5 
+	sTe¡CÏss
+
+
+7 
+Te¡CÏss
+(){}
+
+8 
+Te¡CÏss
+(cÚ¡ Te¡CÏss& 
+a
+){
+	mcout
+ << "fff" << 
+	m’dl
+;}
+
+9 ~
+Te¡CÏss
+(){}
+
+12 
+	$maš
+()
+
+15 
+Te¡CÏss
+ 
+a
+ = 10;
+
+17 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+2
+27
+CopyStream.cpp
+MemCopy.cpp
